@@ -14,7 +14,7 @@ public class d3_3499_퍼펙트셔플 {
 
 		for (int tc = 1; tc <= T; tc++) {
 			int N = Integer.parseInt(br.readLine()); // 카드 수
-			int half = (int) Math.ceil(N / 2.0); // 절반.. N = 5 -> half = 3
+			int half = N % 2 == 0 ? N / 2 : (N / 2) + 1; // 절반.. N = 5 -> half = 3
 			String[] cards = new String[N];
 
 			// cards 배열에 저장
