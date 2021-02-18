@@ -36,7 +36,7 @@ public class bj_1012_유기농배추 {
 				for (int j = 0; j < M; j++) {
 					check = false;
 					dfs(i, j);
-					if (check) answer++;					
+					if (check) answer++;
 				}
 			}
 
