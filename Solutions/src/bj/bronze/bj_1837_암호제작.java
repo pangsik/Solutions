@@ -11,18 +11,19 @@ public class bj_1837_암호제작 {
 
 		String P = st.nextToken(); // P 범위가 10^100 까지..
 		int K = Integer.parseInt(st.nextToken());
-		
+
 		// 소수 false, 나머지 true
 		boolean[] prime = eratos(K);
-		
+
 		for (int i = 0; i < prime.length; i++) {
-			if (prime[i]) continue;
+			if (prime[i])
+				continue;
 			if (divCheck(P, i)) {
 				sb.append("BAD ").append(i);
 				break;
 			}
 		}
-		
+
 		if (sb.length() == 0)
 			sb.append("GOOD");
 
@@ -44,7 +45,7 @@ public class bj_1837_암호제작 {
 				}
 			}
 		}
-		
+
 		return prime;
 	}
 
@@ -52,7 +53,7 @@ public class bj_1837_암호제작 {
 	static boolean divCheck(String P, int n) {
 		char[] p = P.toCharArray();
 		int remain = 0;
-		
+
 		for (int i = 0; i < p.length; i++)
 			remain = (remain * 10 + (p[i] - '0')) % n;
 		return remain == 0;

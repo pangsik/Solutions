@@ -17,4 +17,3 @@ public class bj_17140_이차원배열과연산 {
 		br.close();
 	}
 }
-
