@@ -7,7 +7,7 @@ public class bj_1267_핸드폰요금 {
 	public static void main(String[] args) throws Exception {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st; // new StringTokenizer(br.readLine(), " ");
-		StringBuilder sb = new StringBuilder();
+		//StringBuilder sb = new StringBuilder();
 		
 		int N = Integer.parseInt(br.readLine());
 		int young = 0;
