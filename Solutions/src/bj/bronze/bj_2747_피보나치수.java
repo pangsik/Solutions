@@ -30,12 +30,12 @@ public class bj_2747_피보나치수 {
 		br.close();
 	}
 
-//	static int fibo(int n) {
-//		if (n == 0 || n == 1) {
-//			return n;
-//		}
-//		return fibo(n - 1) + fibo(n - 2);
-//	}
+	static int fibo(int n) {
+		if (n == 0 || n == 1) {
+			return n;
+		}
+		return fibo(n - 1) + fibo(n - 2);
+	}
 }
 
 // 

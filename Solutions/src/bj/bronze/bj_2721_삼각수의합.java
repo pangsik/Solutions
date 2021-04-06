@@ -31,3 +31,4 @@ public class bj_2721_삼각수의합 {
 // ex) n = 3
 // => 1 + 2 + 3
 // n * (n + 1) / 2 공식이 있다~
+// https://m.blog.naver.com/PostView.nhn?blogId=junhyuk7272&logNo=221247061276&proxyReferer=https:%2F%2Fwww.google.com%2F
