@@ -79,7 +79,7 @@ public class bj_20923_숫자할리갈리게임 {
 		while (!doGround.isEmpty()) 
 			sujin.offerFirst(doGround.pollFirst());
 		// 본인 그라운드 덱 흡수
-		while (!suGround.isEmpty()) {
+		while (!suGround.isEmpty()) { 
 			sujin.offerFirst(suGround.pollFirst());
 		}
 	} 
