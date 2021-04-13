@@ -3,7 +3,7 @@ package bj.gold;
 import java.util.*;
 import java.io.*;
 
-public class bj_16174_점프왕쩰리 {
+public class bj_16174_점프왕쩰리Large {
 	static int N;
 	static int[][] map;
 	static int[] di = { 0, 1 };
