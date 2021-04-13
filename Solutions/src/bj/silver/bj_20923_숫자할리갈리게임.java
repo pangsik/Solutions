@@ -82,7 +82,7 @@ public class bj_20923_숫자할리갈리게임 {
 		while (!suGround.isEmpty()) {
 			sujin.offerFirst(suGround.pollFirst());
 		}
-	}
+	} 
 }
  
 // 두 사람은 각 N장 카드로 이루어진 덱을 받음
