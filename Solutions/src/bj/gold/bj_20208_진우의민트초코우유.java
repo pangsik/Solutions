@@ -26,6 +26,7 @@ public class bj_20208_진우의민트초코우유 {
 		N = Integer.parseInt(st.nextToken()); // 마을 크기
 		M = Integer.parseInt(st.nextToken()); // 진우 초기 체력
 		H = Integer.parseInt(st.nextToken()); // 민초 체력 회복량
+		
 		map = new int[N][N];
 		mincho = new ArrayList<>();
 		max = 0;
@@ -50,20 +51,30 @@ public class bj_20208_진우의민트초코우유 {
 		
 		System.out.println(max);
 		
-		
 		br.close();
 	}
 	
 	static void dfs(Pos cur, int hp, int cnt) {
+		// 이미 완벽한 경우가 있으면 그만
+		if (max == mincho.size()) {
+			return;
+		}
+		
+		// 현재 위치에서 집 갈 수 있으면 max값 비교해서 갱신
 		if (getDist(home, cur) <= hp) {
 			max = max > cnt ? max : cnt;
 		}
 		
+		// 다 돌았으면 끝
+		if (cnt == mincho.size()) 
+			return;
+		
+		// 
 		for (int i = 0; i < mincho.size(); i++) {
 			if (!visited[i] && getDist(cur, mincho.get(i)) <= hp) {
 				visited[i] = true;
 				dfs(mincho.get(i), hp - getDist(cur, mincho.get(i)) + H, cnt + 1);
-				visited[i] = false;				
+				visited[i] = false;
 			}
 		}
 	}
