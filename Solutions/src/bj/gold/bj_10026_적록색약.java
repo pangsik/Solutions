@@ -11,6 +11,7 @@ public class bj_10026_적록색약 {
 	static boolean[][] visited;
 	public static void main(String[] args) throws Exception {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		
 		N = Integer.parseInt(br.readLine());
 		map = new char[N][N];
@@ -21,11 +22,18 @@ public class bj_10026_적록색약 {
 			}
 		}
 		
-		int a = getAreaCnt();
-		setRG();
-		int b = getAreaCnt();
 		
-		System.out.println(a + " " + b);
+		bw.write(getAreaCnt() + " ");
+		setRG();
+		bw.append(getAreaCnt() + "\n");
+		
+		bw.flush();
+		
+//		int a = getAreaCnt();
+//		setRG();
+//		int b = getAreaCnt();
+//		
+//		System.out.println(a + " " + b);
 		
 		br.close();
 	}
