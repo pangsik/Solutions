@@ -4,11 +4,12 @@ import java.io.*;
 import java.util.*;
 
 /*
+ * @date : 21.10.14
  * 풀이 시간 : 15분
  * 코멘트 : 쉽게 풀긴 했으나 푼지 얼마 안 된 문제라 그런듯.. 나중에 또 풀어보기
  */
 
-public class Solution2_211014_sw_1953_탈주범검거 {
+public class Solution_sw_1953_탈주범검거_2 {
 	static int N, M, R, C, L, answer;
 	static int[] di = { -1, 0, 1, 0 }; // 상 우 하 좌
 	static int[] dj = { 0, 1, 0, -1 };

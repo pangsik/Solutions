@@ -4,12 +4,13 @@ import java.io.*;
 import java.util.*;
 
 /*
+ * @date : 21.10.16
  * 풀이 시간 : 50분
  * 코멘트 : 처음에 문제를 잘못 이해해서 K도 입력으로 주는줄 알았음.. 문제 꼼꼼히 읽고 의도 잘 파악하기
  *        어쨌든 최적화 갖다 버리고 시키는대로만 하니 풀리긴 함.. 복잡해도 집중력 잃지 말고 조건 하나하나 잘 체크할 것
  */
 
-public class Solution_211016_sw_2117_홈방범서비스 {
+public class Solution_sw_2117_홈방범서비스_1 {
 	static int N, M, homeCnt, answer;
 	static int[] di = { -1, 0, 1, 0 }; // 상우하좌
 	static int[] dj = { 0, 1, 0, -1 };

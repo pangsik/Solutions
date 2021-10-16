@@ -4,13 +4,14 @@ import java.io.*;
 import java.util.*;
 
 /*
+ * @date : 21.10.16
  * 풀이 시간 : 50분
  * 코멘트 : 어레리에 추가하고 제거하는거라 인덱스 신경 잘 써줘야함
  * 		   귀찮다고 인덱스 직접 넣어 삭제하려다가 추가 후 젤 뒤에꺼 삭제할 때 8번 인덱스를 삭제해야하는데 7번 인덱스를 삭제하는 실수 함
  * 		  .size() 이용했다면 이런 실수 없었을 듯
  */
 
-public class Solution_211016_sw_4013_특이한자석 {
+public class Solution_sw_4013_특이한자석_1 {
 	static int K;
 	static ArrayList<Integer>[] magnets = new ArrayList[4];
 	public static void main(String[] args) throws IOException {

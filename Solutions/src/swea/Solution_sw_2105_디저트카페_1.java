@@ -4,17 +4,19 @@ import java.io.*;
 import java.util.*;
 
 /*
+ * @date : 21.10.16
  * 풀이 시간 : 70분
  * 코멘트 : 대각선 4방 탐색이라 뭔가 낯선 느낌이라 쓸데 없이 헤맨 느낌..
- * 		  +확실한거 아니면 이상하게 최적화 하려고 하지 말고 시키는 대로나 하자
+ * 		   확실한거 아니면 이상하게 최적화 하려고 하지 말고 시키는 대로나 하자
+ * 		  visited 없어도 됨! 어차피 방문한 곳은 먹은 디저트 체크에서 걸림
  */
 
-public class Solution_211016_sw_2105_디저트카페 {
+public class Solution_sw_2105_디저트카페_1 {
 	static int N, startX, startY, answer;
 	static int[] di = { 1, 1, -1, -1 }; // 우하, 좌하, 좌상, 우상
 	static int[] dj = { 1, -1, -1, 1 };
 	static int[][] map;
-	static boolean[][] visited;
+//	static boolean[][] visited;
 	static ArrayDeque<Integer> dessertList;
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -58,8 +60,8 @@ public class Solution_211016_sw_2105_디저트카페 {
 				startY = j;
 				dessertList = new ArrayDeque<Integer>();
 				dessertList.add(map[i][j]);
-				visited = new boolean[N][N];
-				visited[i][j] = true;
+//				visited = new boolean[N][N];
+//				visited[i][j] = true;
 				dfs(i, j, 1, 0);
 			}
 		}
@@ -73,12 +75,12 @@ public class Solution_211016_sw_2105_디저트카페 {
 		// 갈 수 있으면 전진
 		if (check(nx, ny)) {
 			dessertList.add(map[nx][ny]);
-			visited[nx][ny] = true;
+//			visited[nx][ny] = true;
 			
 			dfs(nx, ny, len + 1, dir);
 			
 			dessertList.remove(map[nx][ny]);
-			visited[nx][ny] = false;
+//			visited[nx][ny] = false;
 		}
 		
 		// 만약 더 이상 방향 전환이 안되면 스톱. 단,마지막으로 가려는 곳이 출발점이라면 answer 갱신
@@ -94,12 +96,12 @@ public class Solution_211016_sw_2105_디저트카페 {
 		
 		if (check(nx, ny)) {
 			dessertList.add(map[nx][ny]);
-			visited[nx][ny] = true;
+//			visited[nx][ny] = true;
 			
 			dfs(nx, ny, len + 1, dir);
 			
 			dessertList.remove(map[nx][ny]);
-			visited[nx][ny] = false;
+//			visited[nx][ny] = false;
 		}
 		
 		// 방향 전환하고도 전진 안되면 스탑.. 단, dir이 3으로 마지막 방향이고 가려는 곳이 출발점이라면 answer 갱신
@@ -116,9 +118,12 @@ public class Solution_211016_sw_2105_디저트카페 {
 	}
 
 	private static boolean check(int nx, int ny) {
-		if (nx < 0 || nx >= N || ny < 0 || ny >= N || visited[nx][ny] || dessertList.contains(map[nx][ny])) {
+		if (nx < 0 || nx >= N || ny < 0 || ny >= N || dessertList.contains(map[nx][ny])) {
 			return false;
 		}
+//		if (nx < 0 || nx >= N || ny < 0 || ny >= N || visited[nx][ny] || dessertList.contains(map[nx][ny])) {
+//			return false;
+//		}
 		
 		return true;
 	}
@@ -138,3 +143,13 @@ public class Solution_211016_sw_2105_디저트카페 {
 // 현재 방향, 여태 진행한 방향 정보 (무조건 0부터 시작해서 1씩 더해가며 3일 때 원래 자리로 돌아오면 스탑?)
 // 먹은 디저트 저장해서 이미 먹은거 있는지 체크
 // visited 배열로 방문 관리
+
+
+
+
+
+
+
+
+
+

@@ -4,11 +4,12 @@ import java.io.*;
 import java.util.*;
 
 /*
+ * @date : 21.10.14
  * 풀이 시간 : 20분
  * 코멘트 : substring 하는 부분에서 약간 헷갈림 (예쁘게 짜려다가..), Collection 정렬, parseInt 진법 변환되는거 개꿀팁!!!!
  */
 
-public class Solution2_211014_sw_5658_보물상자비밀번호 {
+public class Solution_sw_5658_보물상자비밀번호_2 {
 	static int N, K;
 	static String LockNum;
 	public static void main(String[] args) throws IOException {

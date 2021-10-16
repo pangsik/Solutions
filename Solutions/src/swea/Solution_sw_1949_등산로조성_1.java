@@ -3,10 +3,11 @@ package swea;
 import java.io.*;
 import java.util.*;
 
+// @date : 21.10.13
 // 풀이 시간 : 약 40분
 // dfs 들어갈 때 방문 처리, 나올 때 해제하는거 주의!
 
-public class Solution_211013_sw_1949_등산로조성 {
+public class Solution_sw_1949_등산로조성_1 {
 	static int N, K, maxLen;
 	static int[] di = { -1, 0, 1, 0 };
 	static int[] dj = { 0, 1, 0, -1 };

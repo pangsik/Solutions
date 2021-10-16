@@ -3,10 +3,11 @@ package swea;
 import java.io.*;
 import java.util.*;
 
+// @date : 21.10.13
 // 풀이 시간 : 60분
 // bfs 깊이 체크하는거, 반대 방향 올 수 있는지 (터널 연결 여부 판별) 체크하는거 어려웠음
 
-public class Solution_211013_sw_1953_탈주범검거 {
+public class Solution_sw_1953_탈주범검거_1 {
 	static int N, M, R, C, L, cnt;
 	static int[] di = { -1, 0, 1, 0 }; // 상 우 하 좌
 	static int[] dj = { 0, 1, 0, -1 };

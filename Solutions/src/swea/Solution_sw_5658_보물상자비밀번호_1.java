@@ -3,7 +3,13 @@ package swea;
 import java.io.*;
 import java.util.*;
 
-public class Solution_211012_sw_5658_보물상자비밀번호 {
+/*
+ * @date : 21.10.12 
+ * 풀이 시간 : 못품
+ * 코멘트 : 컴퍼레이터 사용법, 진법 변환!!
+ */
+
+public class Solution_sw_5658_보물상자비밀번호_1 {
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st;

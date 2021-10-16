@@ -4,11 +4,12 @@ import java.io.*;
 import java.util.*;
 
 /*
+ * @date : 21.10.14
  * 풀이 시간 : 25분
  * 코멘트 : 어려움 없이 풀긴 했으나 max값 갱신, continue 빼먹는 실수 함.. 집중!
  */
 
-public class Solution2_211014_sw_1949_등산로조성 {
+public class Solution_sw_1949_등산로조성_2 {
 	static int N, K, maxLen;
 	static int[] di = { -1, 0, 1, 0 };
 	static int[] dj = { 0, 1, 0, -1 };
