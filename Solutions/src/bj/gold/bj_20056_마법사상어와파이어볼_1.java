@@ -3,7 +3,7 @@ package bj.gold;
 import java.io.*;
 import java.util.*;
 
-public class bj_20056_마법사상어와파이어볼 {
+public class bj_20056_마법사상어와파이어볼_1 {
 	static int[] di = { -1, -1, 0, 1, 1, 1, 0, -1 }; // 상 우상 우 우하 하 좌하 좌 좌상
 	static int[] dj = { 0, 1, 1, 1, 0, -1, -1, -1 };
 	static int N, M, K;
