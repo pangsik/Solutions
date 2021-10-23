@@ -3,7 +3,7 @@ package bj.gold;
 import java.io.*;
 import java.util.*;
 
-public class bj_15686_치킨배달 {
+public class bj_15686_치킨배달_1 {
 	static int N, M, minChickenDist;
 	static int[][] city, chosen;
 	static ArrayList<int[]> house, chicken;
