@@ -5,8 +5,8 @@ import java.util.*;
 
 public class Main_16954_움직이는미로탈출 {
 	static int wallCnt;
-	static int[] di = { -1, -1, 0, 1, 1, 1, 0, -1 }; // 상 우상 우 우하 하 좌하 좌 좌상
-	static int[] dj = { 0, 1, 1, 1, 0, -1, -1, -1 };
+	static int[] di = { 0, -1, -1, 0, 1, 1, 1, 0, -1 }; // 상 우상 우 우하 하 좌하 좌 좌상
+	static int[] dj = { 0, 0, 1, 1, 1, 0, -1, -1, -1 };
 	static int[][] map;
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -41,10 +41,10 @@ public class Main_16954_움직이는미로탈출 {
 			for (int i = 0; i < size; i++) {
 				int[] cur = dq.poll();
 				
-				dq.offer(cur);
-				visited[cur[0]][cur[1]] = true;
+				if (cur[0] == 0 && cur[1] == 7)
+					return 1;
 				
-				for (int d = 0; d < 8; d++) {
+				for (int d = 0; d < 9; d++) {
 					int nx = cur[0] + di[d];
 					int ny = cur[1] + dj[d];
 					
