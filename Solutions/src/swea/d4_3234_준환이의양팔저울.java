@@ -3,8 +3,6 @@ package swea;
 import java.io.*;
 import java.util.*;
 
-import com.sun.org.apache.bcel.internal.generic.Select;
-
 public class d4_3234_준환이의양팔저울 {
 	static int ans;
 

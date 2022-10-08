@@ -6,7 +6,6 @@ import java.util.Scanner;
 public class Combination {
 	static int[] numbers;
 	static int N, R, total;
-	static boolean[] isSelected;
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
