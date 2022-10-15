@@ -4,8 +4,10 @@ import java.io.*;
 import java.util.*;
 
 public class bj_23291_어항정리_못품 {
-	static final int SIZE = 101;
+	static final int SIZE = 15;
 	static int N, K;
+	static int[] di = { -1, 0, 1, 0 }; // 상 우 하 좌
+	static int[] dj = { 0, 1, 0, -1 };
 	static int[][] map;
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -65,7 +67,7 @@ public class bj_23291_어항정리_못품 {
 			min = Math.min(min, map[0][j]);
 		}
 		
-		return max - min <= K;
+		return max - min > K;
 	}
 	
 	private static void addFish() {
@@ -76,12 +78,13 @@ public class bj_23291_어항정리_못품 {
 			if (map[0][j] == 0)
 				break;
 			
-			if (min < map[0][j]) {
+			if (min > map[0][j]) {
 				list.clear();
 				list.add(j);
+				min = map[0][j];
 			}
 			
-			if (min == map[0][j]) {
+			else if (min == map[0][j]) {
 				list.add(j);
 			}
 		}
@@ -92,15 +95,36 @@ public class bj_23291_어항정리_못품 {
 	}
 	
 	private static void stackFishbowl1() {
-		
+		int from = 0;
+		int to = 0;
+		int h = 1;
+		while (true) {
+			// 못올리면 break
+			// to + h < N 이어야만 올릴 수있음
+			if (to + h >= N)
+				break;
+			
+			// to부터 시작,,
+			int idx = 0;
+			for (int j = to; j >= from; j--) {
+				idx++;
+				for (int i = 1; i <= h; i++) {
+					// idx (x)
+					// 
+					map[idx][i] = map[i][j];
+					map[i][j] = 0;
+				}
+			}
+			from = to + 1;
+			to = to + idx;
+			h = idx;
+		}
 	}
 	
 	private static void stackFishbowl2() {
 		
 	}
 	
-	static int[] di = { -1, 0, 1, 0 };
-	static int[] dj = { 0, 1, 0, -1 };
 	private static void moveFishes() {
 		for (int i = 0; i < SIZE; i++) {
 			for (int j = 0; j < SIZE; j++) {
